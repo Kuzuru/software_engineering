@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 python-telegram-bot = "*"
+python-dotenv = "*"
 flake8 = "*"
 black = "*"
 isort = "*"

@@ -1,6 +1,6 @@
 import logging
 import os
-
+from dotenv import load_dotenv, dotenv_values
 from src.bot import Bot
 
 logging.basicConfig(
@@ -8,7 +8,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-_TOKEN = "CURRENCY_OUTLOOK_BOT_TOKEN"
+load_dotenv()  # take environment variables from .env.
+_TOKEN_KEY = "CURRENCY_OUTLOOK_BOT_TOKEN"
 
 
 def main(bot_token):
@@ -17,7 +18,7 @@ def main(bot_token):
 
 
 if __name__ == "__main__":
-    BOT_TOKEN = os.environ.get(_TOKEN)
+    BOT_TOKEN = dotenv_values()[_TOKEN_KEY]
     if BOT_TOKEN:
         main(BOT_TOKEN)
     else:
