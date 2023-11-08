@@ -1,5 +1,4 @@
 import logging
-import os
 from dotenv import load_dotenv, dotenv_values
 from src.bot import Bot
 
