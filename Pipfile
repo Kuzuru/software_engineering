@@ -9,6 +9,10 @@ python-dotenv = "*"
 flake8 = "*"
 black = "*"
 isort = "*"
+statsmodels = "*"
+okama = "*"
+numpy = "*"
+pandas = "*"
 
 [dev-packages]
 
